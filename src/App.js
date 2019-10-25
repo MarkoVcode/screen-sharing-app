@@ -392,12 +392,12 @@ class ScreenSharing extends Component {
     this.state = {
       url: this.getDefaultUrl(), // e.g. "ws://192.168.1.10:9080/stream/webrtc",
       options: {
-        useH264: true,
-        resolution: "35",
+        useH264: false,
+        resolution: "30",
         iceServers: [{ urls: ["stun:stun.l.google.com:19302"] }]
       },
       keyCapture: true,
-      gamepadCapture: true,
+      gamepadCapture: false,
       fullscreen: typeof window.orientation !== "undefined" // simple way to check if we are on a mobile
     };
   }
@@ -505,17 +505,7 @@ class App extends Component {
         <PageHeader className="App-header">
           <OverlayTrigger placement="bottom" overlay={tooltip}>
             <Label>
-              <span>WebRTC Screen/Speaker/Keyboard/Gamepad Sharing </span>
-              <small>
-                <a
-                  className="App-link"
-                  href="https://linux-projects.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>(info)</span>
-                </a>
-              </small>
+
             </Label>
           </OverlayTrigger>
         </PageHeader>
