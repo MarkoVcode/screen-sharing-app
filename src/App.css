@@ -18,9 +18,13 @@
 
 #panelElement {
   width: 360px;
-  display: inline-block;
+  display: none;
   font-size: small;
   text-align: left;
+}
+
+.Url {
+  display: none;
 }
 
 .panel {

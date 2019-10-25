@@ -152,15 +152,14 @@ class SessionManager extends Component {
   render() {
     const tooltip = (
       <Tooltip id="tooltip">
-        Start the screen sharing session. Keyboard events will then be sent to
-        the remote peer.
+        Take controll over the vechicle.
       </Tooltip>
     );
 
     return (
       <OverlayTrigger placement="right" overlay={tooltip}>
         <Button onClick={this.handleClick} bsStyle="primary" bsSize="large">
-          {this.state.isToggleOn ? "Start" : "Stop"}
+          {this.state.isToggleOn ? "Join" : "Drop"}
         </Button>
       </OverlayTrigger>
     );
@@ -284,7 +283,7 @@ class Options extends Component {
       </Tooltip>
     );
     return (
-      <Panel id="panelElement" bsStyle="info">
+      <Panel id="panelElement" bsStyle="info" >
         <Panel.Heading>
           <Panel.Title toggle>Options</Panel.Title>
         </Panel.Heading>
